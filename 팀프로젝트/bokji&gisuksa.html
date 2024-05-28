@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Sections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            margin-right: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .tab-button:hover {
+            background-color: #ddd;
+        }
+
+        .tab-button.active {
+            background-color: #ddd;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button" onclick="showSection('section1')">학생복지</button>
+            <button class="tab-button" onclick="showSection('section2')">기숙사 정보</button>
+        </div>
+        <div class="content">
+            <div id="section1" class="section active">
+                <h2>학과복지</h2>
+                <p> 경영학과 : 과방에 고데기 , 양치도구 등 제공</p>
+                <p> 외국어계열 : 그저 그렇다.(보통에 가까움) 유용하지 않은 느낌이 든다.</p>
+                <p>인공지능 : 뭔가 많이 하는 건 알겠는데 참여 동기부여는 부족하다. 과방에 뭘 배치한다고 하기는 하는데 사실 과방에 가는 사람이 학생에 몇%가 될 까 싶기도 한 부분이다.</p>
+                <p>식품영양학과 : 교육대학원에 위치해 있기 때문에 무당이를 타지 않으면 힘겹게 걸어 올라가야 한다는 단점이 있어요. 시험도 컴공같은 경우에는 어렵다고 들었는데 저희 학과는 100퍼센트 암기과목이라서 달달 외우기만 하면 돼요.
+                저희 학과는 이벤트를 참 많이 하는데요. 뭘 자꾸 먹으라고 간식을 챙겨주고요. 바이오나노대학에서 행사 많이 해요.</p>
+                    
+            </div>
+            <div id="section2" class="section">
+                <h2>기숙사 정보</h2>
+                <p>통금이 있어서 너무 힘들다. 막차 생각 안 해서 좋다. 하지만 통금이 있어서 1시가 넘어가면 해 뜰때까지 먹는게 너무 억울하다. 5시까지 밖에서 노숙해야 하는 게 서럽다.</p>
+                <p>장점: 자취할 때 드는 불안감이나 무서움이 없음. 단점: 통금이 있음.</p>
+                <p>통금이 있어서 스트레스다. 상점 받을 기회는 없는데 벌점만 더럽게 많이 받을 수 있다. 그러다 벌점 10점 되면 징계 퇴사 당한다. 학교랑 가깝지만 지하철이랑 너무 멀다. 이성끼리 같이 밥을 먹을 장소가 없다? 1층에서 취식이 가능한 공간이 없어 이성끼리 배달음식을 공유하기 쉽지 않다. 환기가 잘 되지 않는다. 룸메이트 잘못 걸리면 변경을 하기 안되니 잘 선택하라 (세 번째 답변 제가 작성했어요. 솔직히 자취 마려워요. 근데 이게 이돈 주고 여기서 사는게 맞나 싶어요.)</p>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            // 모든 섹션 숨기기
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // 모든 버튼 비활성화
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // 선택한 섹션 보이기
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+
+            // 활성화된 버튼 스타일 적용
+            const activeButton = document.querySelector(`.tab-button[onclick="showSection('${sectionId}')"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

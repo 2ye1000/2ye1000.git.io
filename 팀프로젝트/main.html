@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    
+    <style>
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center; /* 가운데 정렬 */
+        }
+
+        .site-title {
+            margin-bottom: 20px;
+            display: inline-block; /* 가로로 나란히 표시하기 위해 inline-block 설정 */
+            vertical-align: middle; /* 수직 가운데 정렬 */
+        }
+
+        .site-title img {
+            width: 100px; /* 이미지 너비 조정 */
+            height: auto; /* 높이 자동 조정 */
+            margin-right: 10px; /* 이미지와 제목 사이 간격 조정 */
+            margin-top: 10px; /* 이미지를 아래로 이동 */
+        }
+
+        .site-title h1 {
+            margin: 0; /* 기본 마진 제거 */
+            display: inline-block; /* 가로로 나란히 표시하기 위해 inline-block 설정 */
+            vertical-align: middle; /* 수직 가운데 정렬 */
+    
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .nav-list li {
+            flex: 1;
+        }
+
+        .nav-list li a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            border-left: none;
+            text-align: center;
+        }
+
+        .nav-list li:first-child a {
+            border-left: 1px solid #ccc;
+        }
+
+        .nav-list li a:hover {
+            background-color: #d0d0d0;
+        }
+
+        .section-wrapper {
+            display: flex;
+            justify-content: space-around; /* 섹션들을 가운데 정렬 */
+            margin-top: 20px;
+        
+        }
+
+        .section {
+            width: 45%; /* 섹션의 너비를 조정 */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .section h2 {
+            text-align: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="site-title">
+            <img src="4.png" alt="Site Logo">
+            <h1>Gachon Ambassador</h1>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="gongmo.html" target="_blank">공모전 탐색</a></li>
+                <li><a href="gangui.html " target="_blank">강의평</a></li>
+                <li><a href="studygroup.html" target="_blank">스터디그룹 모집</a></li>
+                <li><a href="bokji&gisuksa.html" target="_blank">학생복지&기숙사정보</a></li>
+                <li><a href="food.html" target="_blank">학교 주변 맛집</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="section-wrapper">
+        <div class="section">
+            <h2>인기글</h2>
+            <ul>
+                <li>메디컬 캠퍼스에서 전과자 촬영 중인데!?!? 🎈🎈</li>
+                <li>🤖딥러닝/데이터사이언스 배우고 싶은.....</li>
+                <li>강형욱 한짤 요약🤦‍♂️</li>
+                <li>🏫🦭하계 집중 영어스터디 모집 공고!!🏫🦭</li>
+                <li>📢취업 정보 필요한 사람?[광고]</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>추천글</h2>
+            <ul>
+                <li>🆕인문사회융합인재양성사업단 [AI 활용 지역사회 문제해결 캠프] 참가...</li>
+                <li>🆕조기취업형 계약학과(바이오의료기기학과) 일반조교 모집 </li>
+                <li>🆕[대학혁신⦁성과교류학과세미나] 경영학부-에너지 산업의 인력개발 &...</li>
+                <li>🆕[글로벌] 2024학년도 후기 일반대학원 외국인 특별전형 2차 모집 </li>
+                <li>🆕2024학년도 하계 계절학기 1차 폐강 교과목 안내 </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
